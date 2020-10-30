@@ -1,17 +1,17 @@
 version: '3'
 services:
   nginx:
-    depends_on:
+    depends_on: 
       - api
       - client
     restart: always
     build:
       dockerfile: Dockerfile
       context: ./nginx
-    ports:
+    ports: 
       - '3080:80'
   api:
-    build:
+    build: 
       dockerfile: Dockerfile
       context: ./server
     volumes:
@@ -22,6 +22,6 @@ services:
     build:
       dockerfile: Dockerfile
       context: ./client
-    volumes:
+    volumes: 
       - /app/node_modules
-      - ./client:/app
+      - ./client:/app 

@@ -7,6 +7,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Express route handlers
+// api/data
 app.get('/data', (req, res) => {
   res.setHeader('Content-Type', 'application/json');
   res.send(JSON.stringify({
